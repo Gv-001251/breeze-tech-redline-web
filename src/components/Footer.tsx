@@ -24,8 +24,7 @@ export function Footer() {
       "About Us",
       "Our Team",
       "Careers",
-      "News & Updates",
-      "Case Studies"
+      "News & Updates"
     ],
     support: [
       "Documentation",
@@ -65,44 +64,7 @@ export function Footer() {
 
         {/* Main Footer Content */}
         <div className="py-12">
-          <div className="grid lg:grid-cols-5 gap-8">
-            {/* Company Info */}
-            <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="bg-gradient-primary p-2 rounded-lg">
-                  <Wind className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <span className="text-xl font-bold text-foreground">BREEZE</span>
-                  <span className="text-xl font-bold text-primary"> TECHNIQUES</span>
-                </div>
-              </div>
-              
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Leading manufacturer of premium pneumatic equipment, delivering 
-                innovative solutions for industrial applications worldwide.
-              </p>
-
-              <div className="space-y-3">
-                <div className="flex items-center text-sm">
-                  <MapPin className="h-4 w-4 text-primary mr-3" />
-                  <span className="text-muted-foreground">123 Industrial Ave, Manufacturing District</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <Phone className="h-4 w-4 text-primary mr-3" />
-                  <span className="text-muted-foreground">+91 8056765859</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <span className="text-primary font-semibold mr-3">Emergency:</span>
-                  <span className="text-primary">8056765859</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <Mail className="h-4 w-4 text-primary mr-3" />
-                  <span className="text-muted-foreground">info@breezetechniques.com</span>
-                </div>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Products */}
             <div>
               <h4 className="font-semibold text-foreground mb-4">Products</h4>
@@ -157,6 +119,24 @@ export function Footer() {
             {/* Support */}
             <div>
               <h4 className="font-semibold text-foreground mb-4">Support</h4>
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center text-sm">
+                  <MapPin className="h-4 w-4 text-primary mr-3" />
+                  <span className="text-muted-foreground">123 Industrial Ave, Manufacturing District</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Phone className="h-4 w-4 text-primary mr-3" />
+                  <span className="text-muted-foreground">+91 8056765859</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <span className="text-primary font-semibold mr-3">Emergency:</span>
+                  <span className="text-primary">8056765859</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Mail className="h-4 w-4 text-primary mr-3" />
+                  <span className="text-muted-foreground">info@breezetechniques.com</span>
+                </div>
+              </div>
               <ul className="space-y-2">
                 {footerLinks.support.map((link) => (
                   <li key={link}>
