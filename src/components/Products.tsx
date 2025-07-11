@@ -14,8 +14,8 @@ export function Products() {
   const products = [
     {
       id: 1,
-      name: "Refrigerating Air Compressors",
-      description: "High-efficiency refrigerating air compressors designed for continuous operation with advanced cooling systems.",
+      name: "Refrigerator Air Dryers",
+      description: "High-efficiency refrigerator air dryers designed for continuous operation with advanced cooling systems.",
       icon: Snowflake,
       features: [
         "Energy efficient operation",
@@ -59,18 +59,33 @@ export function Products() {
     },
     {
       id: 4,
-      name: "Pneumatic Control Systems",
-      description: "Complete pneumatic control solutions with advanced monitoring and automation capabilities.",
+      name: "Screw Compressors",
+      description: "Robust rotary screw compressors delivering consistent compressed air with superior efficiency and reliability.",
       icon: Gauge,
       features: [
-        "Smart control panels",
-        "Remote monitoring",
-        "Automated operation",
-        "Energy optimization"
+        "Oil-injected design",
+        "Variable speed drive",
+        "High efficiency motor",
+        "Minimal maintenance"
       ],
-      capacity: "Custom",
-      control: "PLC Based",
-      badge: "Smart Technology"
+      capacity: "25-500 CFM",
+      pressure: "100-175 PSI",
+      badge: "Industrial Grade"
+    },
+    {
+      id: 5,
+      name: "Reciprocating Air Compressors",
+      description: "Heavy-duty reciprocating compressors perfect for high-pressure applications and intermittent use.",
+      icon: Zap,
+      features: [
+        "High pressure capability",
+        "Durable construction",
+        "Easy maintenance",
+        "Cost effective"
+      ],
+      capacity: "1-100 CFM",
+      pressure: "100-250 PSI",
+      badge: "High Pressure"
     }
   ];
 
@@ -123,10 +138,10 @@ export function Products() {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">
-                      {product.pressure ? "Pressure" : product.dewPoint ? "Dew Point" : product.efficiency ? "Efficiency" : "Control"}
+                      {product.pressure ? "Pressure" : product.dewPoint ? "Dew Point" : "Efficiency"}
                     </div>
                     <div className="font-semibold text-foreground">
-                      {product.pressure || product.dewPoint || product.efficiency || product.control}
+                      {product.pressure || product.dewPoint || product.efficiency}
                     </div>
                   </div>
                 </div>

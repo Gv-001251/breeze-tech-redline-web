@@ -65,9 +65,9 @@ export function Footer() {
 
         {/* Main Footer Content */}
         <div className="py-12">
-          <div className="grid lg:grid-cols-6 gap-8">
+          <div className="grid lg:grid-cols-5 gap-8">
             {/* Company Info */}
-            <div className="lg:col-span-2">
+            <div>
               <div className="flex items-center space-x-2 mb-6">
                 <div className="bg-gradient-primary p-2 rounded-lg">
                   <Wind className="h-6 w-6 text-primary-foreground" />
@@ -90,7 +90,11 @@ export function Footer() {
                 </div>
                 <div className="flex items-center text-sm">
                   <Phone className="h-4 w-4 text-primary mr-3" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                  <span className="text-muted-foreground">+91 8056765859</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <span className="text-primary font-semibold mr-3">Emergency:</span>
+                  <span className="text-primary">8056765859</span>
                 </div>
                 <div className="flex items-center text-sm">
                   <Mail className="h-4 w-4 text-primary mr-3" />
