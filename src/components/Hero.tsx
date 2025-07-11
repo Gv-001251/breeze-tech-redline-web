@@ -10,7 +10,7 @@ export function Hero() {
         <img
           src={heroImage}
           alt="Industrial Manufacturing"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>

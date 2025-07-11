@@ -172,11 +172,6 @@ export function Footer() {
               </a>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">Made with</span>
-              <span className="text-primary">❤️</span>
-              <span className="text-sm text-muted-foreground">for Industry</span>
-            </div>
           </div>
         </div>
       </div>
