@@ -113,31 +113,31 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Get In Touch</h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4 lg:mb-6">Get In Touch</h3>
+              <p className="text-muted-foreground mb-6 lg:mb-8 leading-relaxed text-sm lg:text-base">
                 Whether you need a quote, technical support, or want to learn more about our products, 
                 we're here to help. Contact us through any of the channels below.
               </p>
             </div>
 
             {/* Contact Cards */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
               {contactInfo.map((info, index) => (
                 <Card key={index} className="group hover:shadow-glow transition-smooth border-border bg-card/80 backdrop-blur-sm">
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="bg-gradient-primary p-3 rounded-xl">
-                        <info.icon className="h-6 w-6 text-primary-foreground" />
+                  <CardContent className="p-4 lg:p-6">
+                    <div className="flex items-center justify-between mb-3 lg:mb-4">
+                      <div className="bg-gradient-primary p-2 lg:p-3 rounded-xl">
+                        <info.icon className="h-5 w-5 lg:h-6 lg:w-6 text-primary-foreground" />
                       </div>
                       <Badge variant="outline" className="text-xs border-primary/20 text-primary">
                         {info.badge}
                       </Badge>
                     </div>
-                    <h4 className="font-semibold text-foreground mb-3 group-hover:text-primary transition-smooth">
+                    <h4 className="font-semibold text-foreground mb-2 lg:mb-3 group-hover:text-primary transition-smooth text-sm lg:text-base">
                       {info.title}
                     </h4>
                     <div className="space-y-1">
@@ -154,14 +154,14 @@ export function Contact() {
 
             {/* Quick Contact */}
             <Card className="bg-muted/30 border-border">
-              <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-4">Emergency Support</h4>
-                <p className="text-muted-foreground text-sm mb-4">
+              <CardContent className="p-4 lg:p-6">
+                <h4 className="font-semibold text-foreground mb-3 lg:mb-4 text-sm lg:text-base">Emergency Support</h4>
+                <p className="text-muted-foreground text-xs lg:text-sm mb-3 lg:mb-4">
                   Need immediate assistance? Our emergency support team is available 24/7 
                   for critical system failures and urgent repairs.
                 </p>
-                <Button variant="hero" size="sm" className="w-full">
-                  Call Emergency Line: 1-800-URGENT
+                <Button variant="hero" size="sm" className="w-full text-xs lg:text-sm">
+                  Call Emergency Line: 8056765859
                 </Button>
               </CardContent>
             </Card>
@@ -169,11 +169,11 @@ export function Contact() {
 
           {/* Contact Form */}
           <Card className="bg-card/80 backdrop-blur-sm border-border shadow-card">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h3>
+            <CardContent className="p-4 lg:p-8">
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4 lg:mb-6">Send Us a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Full Name *
@@ -206,7 +206,7 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
                       Company Name
