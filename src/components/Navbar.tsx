@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Wind } from "lucide-react";
+import { Menu, X, Wind, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,12 @@ export function Navbar() {
             <Button variant="hero" size="sm">
               Get Quote
             </Button>
+            <Link to="/auth">
+              <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                Login
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -71,10 +78,16 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <div className="px-3 pt-2">
+              <div className="px-3 pt-2 space-y-2">
                 <Button variant="hero" size="sm" className="w-full">
                   Get Quote
                 </Button>
+                <Link to="/auth" className="block">
+                  <Button variant="outline" size="sm" className="w-full flex items-center gap-2">
+                    <User className="h-4 w-4" />
+                    Login
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
