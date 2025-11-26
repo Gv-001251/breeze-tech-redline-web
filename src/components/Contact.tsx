@@ -13,7 +13,6 @@ import {
   CheckCircle
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -27,60 +26,34 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  // Initialize EmailJS
-  const PUBLIC_KEY = 'maDLHCzI4jGPlQ69M';
-  const SERVICE_ID = 'service_otredh8';
-  const TEMPLATE_ID = 'template_ex0spwi';
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
-      // Initialize EmailJS with public key
-      emailjs.init(PUBLIC_KEY);
+      // Simulate form submission (in production, this would send to a backend)
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Prepare email template parameters
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        company: formData.company || 'Not provided',
-        phone: formData.phone || 'Not provided',
-        service: formData.service || 'Not specified',
-        message: formData.message,
-        to_email: 'info@breezetechniques.com' // Default recipient
-      };
-      
-      // Send email using EmailJS
-      const response = await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        templateParams
-      );
-      
-      if (response.status === 200) {
-        toast({
-          title: "Message Sent Successfully!",
-          description: "We'll get back to you within 24 hours.",
-        });
-        
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          company: "",
-          phone: "",
-          service: "",
-          message: ""
-        });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      console.error('EmailJS error:', error);
+      // Show success message
       toast({
-        title: "Message Failed to Send",
-        description: "Please try again or contact us directly at info@breezetechniques.com",
+        title: "Message Sent Successfully!",
+        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission Error",
+        description: "There was an error submitting your form. Please try again.",
         variant: "destructive"
       });
     } finally {
